@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            margin: 0px;
+
+        }
+
+        .doira {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+
+
+        }
+
+        .shakl {
+            width: 100px;
+            height: 600px;
+            margin-left: 300px;
+            background-color: black;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .shakl2 {
+            width: 100px;
+            height: 100%;
+            margin-left: 300px;
+            margin-top: 750px;
+            background-color: black;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .shakl3 {
+            width: 100px;
+            height: 750px;
+            margin-left: 600px;
+            background-color: black;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .shakl4 {
+            width: 100px;
+            height: 100%;
+            margin-left: 600px;
+            margin-top: 900px;
+            background-color: black;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .shakl5 {
+            width: 100px;
+            height: 600px;
+            margin-left: 900px;
+            background-color: black;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .shakl6 {
+            width: 100px;
+            height: 100%;
+            margin-left: 900px;
+            margin-top: 750px;
+            background-color: black;
+            position: absolute;
+            z-index: -1;
+        }
+
+        @keyframes doira {
+            1%{
+                width: 0px;
+                height: 0px;
+            
+            }
+            100%{
+                width: 0px;
+                height: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div class="doira"></div>
+    <div class="shakl"></div>
+    <div class="shakl2"></div>
+    <div class="shakl3"></div>
+    <div class="shakl4"></div>
+    <div class="shakl5"></div>
+    <div class="shakl6"></div>
+    <div class="shakl7"></div>
+    <div class="shakl8"></div>
+
+    <script>
+        document.onmousemove = function (e) {
+
+            var x = e.clientX
+            var y = e.clientY
+            let koptok = document.getElementsByClassName("doira")[0]
+            koptok.style.marginLeft = x - 25 + "px"
+            koptok.style.marginTop = y - 25 + "px"
+            koptok.style.position = "absolute"
+            koptok.style.zIndex = "1"
+
+            let body = document.getElementById('body')
+            body.style.overflow = "hidden"
+            if (x >= 280 && y <= 625 && x <= 425) {
+                // body.style.backgroundColor = "red"
+                /*koptok.style.width = '0px'
+                koptok.style.height = '0px'
+                koptok.style.transition = '1s'*/
+                
+                koptok.style.animation = 'doira 100s'
+                koptok.style.animationTCount = '1'
+                // koptok.style.transition = '1s'
+                
+
+            }
+            else if (x >= 280 && y >= 727 && x <= 425) {
+                // body.style.backgroundColor = "red"
+                koptok.style.animation = 'doira 100s'
+                koptok.style.animationTCount = '1'
+            }
+            else if (x >= 575 && y <= 775 && x <= 725) {
+                // body.style.backgroundColor = "red"
+                koptok.style.animation = 'doira 100s'
+                koptok.style.animationTCount = '1'
+            }
+            else if (x >= 575 && y >= 877 && x <= 725) {
+                // body.style.backgroundColor = "red"
+                koptok.style.animation = 'doira 100s'
+                koptok.style.animationTCount = '1'
+            }
+            else if (x >= 880 && y >= 730 && x <= 1025) {
+                // body.style.backgroundColor = "red"
+                koptok.style.animation = 'doira 100s'
+                koptok.style.animationTCount = '1'
+            }
+            else if (x >= 875 && y <= 625 && x <= 1025) {
+                // body.style.backgroundColor = "red"
+                koptok.style.animation = 'doira 100s'
+                koptok.style.animationTCount = '1'
+            }
+            else {
+                body.style.backgroundColor = "white"
+                koptok.style.width = '50px'
+                koptok.style.height = '50px'
+                koptok.style.transition = 'none'
+                koptok.style.animation = 'none'
+            }
+
+            let div = document.getElementById('shakl')
+            if (x >= 256 && y <= 499 && x <= 400) {
+            }
+
+        }
+    </script>
+</body>
+
+</html>
